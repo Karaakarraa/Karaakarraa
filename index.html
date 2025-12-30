@@ -738,8 +738,21 @@ Oromiyaa,<br>
 •	Hinseenee Makuriyaa, "Gonfoo Mo'ichaa"<br>
 •	Miratuu Shaanqoo, "Siif Galeeraa?"<br>
 </p>` }
-           ];
-	
+			{
+                title: "WAA'EE BARREESSAA",
+                content: `
+                    <div style="text-align:center;">
+                        <img src="author.jpg" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:15px; border: 3px solid #4B1F01;">
+                        <h2>Qajeelaa Hambisaa</h2>
+                        <p><i>Barreessaa, Barsiisaa, Ogeessa Miidiyaa, Ogeessa Giraafiksii, Develoopperii fi Gulaalaa kitaabilee</i></p>
+                    </div>
+                    <hr>
+                    <p>Barreessaan kitaaba kanaa Obbo <b>Qajeelaa Hambisaa</b> jedhamu dhalatee kan guddate Lixa Wallaggaa, Aanaa Yuubdoo, Ganda Biqiltuu Aayiraa, Iddoo addaa Tosowoo jedhamuttidha. Barnoota isaa sadarkaa 1ffaa-Warra Guutuu, sadrkaa 2ffaa-Warqee Yuubdoo, qophaa'ina-Biiftuu Aayiraa, Digirii jalqabaa-Economics dhaan Arba Minch University, Postgraduate Diploma in Teaching- Bahirdar University tti xumure. Economics Barsiisuudhaan muuxannoo waggaa 4 kan qabu Qajeelaan Kitaabilee Karaa Karraa fi Dukkanicha Limixii barreessuun dhalootaaf gumaacheera.</p>
+                    <p>Yeroo ammaa kana OBN keessatti Expartii Gurgurtaa Beeksisaafi Ispoonseraa ta'ee hojjetaa jira. Hojii isaa idilee kana cinattes Qajeelaan ogummaawwan Akka Graphic Design fi Web Development irratti gumaacha adda addaa gochaa jira. Kanaafuu namoonni kitaaba keessan bareechachuu, Website mataa keessanii qabaachuu, Kitaaba keessaniif App hojjetachuu barbaaddan dubbisuu dandeessu.</p>
+                    <p>Odeeffannoo dabalataaf:</p> 
+                    <p><b>0910166955 | 0942420578</b></p>
+                    <h3 style="text-align:center; color:#4B1F01;">Horaa Bulaa Deebanaa!</h3>
+                `} ];
         let current = 0;
         const main = document.getElementById('main-container');
         const menu = document.getElementById('menu-list');
@@ -799,7 +812,7 @@ Oromiyaa,<br>
 if ('serviceWorker' in navigator) {
     const swCode = `
         const cacheName = 'karaa-karraa-v2';
-        const assets = ['./', './index.html', './manifest.json', './icon.png'];
+       const assets = ['./', './index.html', './manifest.json', './icon.png', './author.jpg'];
 
         self.addEventListener('install', (e) => {
             e.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(assets)));
@@ -817,5 +830,6 @@ if ('serviceWorker' in navigator) {
 </body>
 
 </html>
+
 
 
