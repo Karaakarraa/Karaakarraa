@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KARAA KARRAA - Full Edition</title>
-    
+
     <link rel="manifest" href="manifest.json">
 
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    
+
     <style>
         :root {
             --primary-bg: #4B1F01; --sidebar-bg: #2D1301;
@@ -49,7 +49,7 @@
             flex-direction: column; 
             align-items: center; 
         }
-        
+
         /* Background adii (paper) barreeffama kee hunda akka liqimsuuf min-height kaa'eera */
         .paper { 
             background: var(--paper); 
@@ -61,7 +61,7 @@
             min-height: fit-content; /* Akka inni barreeffamaan dheeratuuf */
             margin-bottom: 40px;
         }
-        
+
         @media (max-width: 600px) { .paper { padding: 30px 20px; } }
 
         section { display: none; }
@@ -76,7 +76,7 @@
         /* --- FOOTER --- */
         footer { background: var(--sidebar-bg); height: 70px; border-top: 1px solid var(--gold); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
         .nav-btn { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 8px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; }
-        
+
         #installBanner { display: none; background: var(--gold); color: #000; text-align: center; padding: 10px; font-weight: bold; border: none; width: 100%; cursor: pointer; }
     </style>
 </head>
@@ -114,7 +114,7 @@
             <button class="nav-btn" onclick="change(-1)">←</button>
             <button class="nav-btn" onclick="change(1)">→</button>
         </div>
-        
+
     </footer>
 <button id="installBanner" style="display:none;" onclick="installApp()">
     INSTALL KARAA KARRAA APP
@@ -715,67 +715,44 @@ Waan kutannoo isaaniin  hojjetanii itti milkaa'aauus dandaa'aniiru.</p>
 	7. Namni kaayyoo malee deemuuf qilleensi tokkumadha.<br>
 	8. Dhiibbaan namoota injifachuuf taphatan cimoo taasisa. Warra akka hin injifatamneef taphatan immoo anniisaa duraa fixa.</p></h3><br>
 
-            { 
-                title: "Wabiiwwan", 
-                content: `<h2>WABIIWWAN</h2>
-                <p>• Eebbisaa Baayisaa(2022), "Gatiin Namaa meeqa"?. Daystar printing and trading<br>
-                • Miratuu Shaanqoo, "Garbummaa Birmadummaa fakkaattu", maxxansa 4ffaa, 2020, nachsar printing press <br>
-                • Kelly-Plate, J. Eubanks, E. (2010). "Applying Life skills". New York: The McGraw-Hill Companies, Inc.<br>
-                • Lammeessaa Jammaraa, "IFAAJEE", 2021. Finfinnee Oromiyaa,<br>
-                • Bailin, Sh.(1987). "Critical and Creative Thinking". Vol. IX.1, Winter.<br>
-                • Eebbisaa Baayisaa Abeetuu, "Miiltoo", Gulaala 8ffaa, Nachsar printing, Finfinnee, Oromiyaa, 2020<br>
-                • Kagan, S. (2004). Macmillan Life Skills.www.macmillanenglish.com/life-skills.<br>
-                • Shiv Khera, "YOU CAN WIN". Published by Rajive Beri for Maximilian India Ltd, 2/10 anson Road, Daryagani, NewDelhi 11002, c1998, 2002<br>
-                • Hinseenee Makuriyaa, "Gonfoo Mo'ichaa"<br>
-                • Miratuu Shaanqoo, "Siif Galeeraa?"<br>
-                </p>` 
-            },
-            {
-                title: "WAA'EE BARREESSAA",
-                content: `
-                    <div style="text-align:center;">
-                        <img src="author.jpg" style="width:120px; height:120px; object-fit:cover; border-radius:50%; margin-bottom:15px; border: 3px solid #4B1F01;">
-                        <h2>Qajeelaa Hambisaa</h2>
-                        <p><i>Barreessaa, Barsiisaa, Ogeessa Miidiyaa, Ogeessa Giraafiksii, Develoopperii fi Gulaalaa kitaabilee</i></p>
-                    </div>
-                    <hr>
-                    <p>Barreessaan kitaaba kanaa Obbo <b>Qajeelaa Hambisaa</b> jedhamu dhalatee kan guddate Lixa Wallaggaa, Aanaa Yuubdoo, Ganda Biqiltuu Aayiraa, Iddoo addaa Tosowoo jedhamuttidha. Barnoota isaa sadarkaa 1ffaa-Warra Guutuu, sadrkaa 2ffaa-Warqee Yuubdoo, qophaa'ina-Biiftuu Aayiraa, Digirii jalqabaa-Economics dhaan Arba Minch University, Postgraduate Diploma in Teaching- Bahirdar University tti xumure. Economics Barsiisuudhaan muuxannoo waggaa 4 kan qabu Qajeelaan Kitaabilee Karaa Karraa fi Dukkanicha Limixii barreessuun dhalootaaf gumaacheera.</p>
-                    <p>Yeroo ammaa kana OBN keessatti Expartii Gurgurtaa Beeksisaafi Ispoonseraa ta'ee hojjetaa jira. Hojii isaa idilee kana cinattes Qajeelaan ogummaawwan Akka Graphic Design fi Web Development irratti gumaacha adda addaa gochaa jira. Kanaafuu namoonni kitaaba keessan bareechachuu, Website mataa keessanii qabaachuu, Kitaaba keessaniif App hojjetachuu barbaaddan dubbisuu dandeessu.</p>
-                    <p>Odeeffannoo dabalataaf:</p> 
-                    <p><b>0910166955 | 0942420578</b></p>
-                    <h3 style="text-align:center; color:#4B1F01;">Horaa Bulaa Deebanaa!</h3>
-                `
-            }
-        ]; // Array-ichi asitti cufamuu qaba
+</p>` },
+            { title: "Wabiiwwan", content: `<h2>WABIIWWAN</h2>
+            <p>•	Eebbisaa Baayisaa(2022), "Gatiin Namaa meeqa"?. 
+       Daystar printing and trading<br>
+•	Miratuu Shaanqoo, "Garbummaa Birmadummaa  
+       fakkaattu", maxxansa 4ffaa, 2020, nachsar printing  
+        press <br>
+•	Kelly-Plate, J. Eubanks, E. (2010). "Applying Life skills".  
+        New York: The McGraw-Hill Companies, Inc.<br>
+•	Lammeessaa Jammaraa, "IFAAJEE", 2021. Finfinnee 
+Oromiyaa,<br>
+•	Bailin, Sh.(1987). "Critical and Creative Thinking". Vol. IX.1, 
+         Winter.<br>
+•	Eebbisaa Baayisaa Abeetuu, "Miiltoo", Gulaala 8ffaa, 
+         Nachsar printing, Finfinnee, Oromiyaa, 2020<br>
+•	Kagan, S. (2004). Macmillan Life 
+         Skills.www.macmillanenglish.com/life-skills.<br>
+•	Shiv Khera, "YOU CAN WIN". Published by Rajive Beri for 
+         Maximilan India Ltd, 2/10 anson Road, Daryagani,  
+                     NewDelhi 11002, c1998, 2002<br>
+•	Hinseenee Makuriyaa, "Gonfoo Mo'ichaa"<br>
+•	Miratuu Shaanqoo, "Siif Galeeraa?"<br>
+</p>` }
+           ];
 
         let current = 0;
-
-        let current = 0;
-
         const main = document.getElementById('main-container');
-
         const menu = document.getElementById('menu-list');
 
-
-
         function init() {
-
             bookPages.forEach((p, i) => {
-
                 const li = document.createElement('li');
-
                 li.innerText = p.title;
-
                 li.onclick = () => goTo(i);
-
                 menu.appendChild(li);
 
-
-
                 const sec = document.createElement('section');
-
                 sec.id = `s${i}`;
-
                 sec.innerHTML = p.content;
                 if(i === 0) sec.classList.add('active');
                 main.appendChild(sec);
@@ -783,69 +760,52 @@ Waan kutannoo isaaniin  hojjetanii itti milkaa'aauus dandaa'aniiru.</p>
         }
 
         function toggleMenu() {
-
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
 
         function goTo(idx) {
-
             document.getElementById(`s${current}`).classList.remove('active');
-
             current = idx;
-
             document.getElementById(`s${current}`).classList.add('active');
-
             document.getElementById('header-label').innerText = bookPages[current].title.toUpperCase();
-
             if(document.getElementById('sidebar').classList.contains('active')) toggleMenu();
-
             document.getElementById('scroll-box').scrollTop = 0;
-
         }
 
         function change(step) {
-
             let next = current + step;
-
             if (next >= 0 && next < bookPages.length) goTo(next);
         }
 
         // PWA Install Logic
-
         let deferredPrompt;
-
         window.addEventListener('beforeinstallprompt', (e) => {
-
             e.preventDefault();
-
             deferredPrompt = e;
-
             document.getElementById('installBanner').style.display = 'block';
-
         });
 
         async function installApp() {
-
             if (deferredPrompt) {
-
                 deferredPrompt.prompt();
-
                 deferredPrompt = null;
-
                 document.getElementById('installBanner').style.display = 'none';
             }
         }
-        init();
 
+        init();
         // Service Worker galmeessuuf (Install akka ta'uuf dirqama)
 if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('data:text/javascript;base64,' + btoa('self.addEventListener("fetch", (event) => {});'));
     const swCode = `
         const cacheName = 'karaa-karraa-v2';
-       const assets = ['./', './index.html', './manifest.json', './icon.png', './author.jpg'];
+        const assets = ['./', './index.html', './manifest.json', './icon.png'];
+
         self.addEventListener('install', (e) => {
-          e.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(assets)));
+            e.waitUntil(caches.open(cacheName).then((cache) => cache.addAll(assets)));
         });
+
         self.addEventListener('fetch', (e) => {
             e.respondWith(caches.match(e.request).then((res) => res || fetch(e.request)));
         });
@@ -854,8 +814,12 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register(URL.createObjectURL(blob));
 }
     </script>
+
 </body>
 </html>
+
+</html>
+
 
 
 
