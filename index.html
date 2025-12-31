@@ -795,11 +795,11 @@ Oromiyaa,<br>
         }
 
         init();
-// --- KOOIDII OFFLINE HOJJETU KANA QOFA JALA GALCHI ---
+		
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 const swCode = `
-                    const cacheName = 'karaa-karraa-final-v200';
+                    const cacheName = 'karaa-karraa-vFINAL-500';
                     const assets = [
                         './',
                         './index.html',
@@ -832,13 +832,18 @@ Oromiyaa,<br>
                 `;
                 const blob = new Blob([swCode], { type: 'application/javascript' });
                 navigator.serviceWorker.register(URL.createObjectURL(blob))
-                    .then(() => console.log("Offline mode optimized!"));
+                    .then(() => console.log("SW Registered Successfully"))
+                    .catch((err) => console.log("SW Registration Failed", err));
             });
         }
+    </script>
+</body>
+</html>
     </script>
     
 </body>
 </html>
+
 
 
 
