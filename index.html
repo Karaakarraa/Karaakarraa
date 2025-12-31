@@ -795,10 +795,11 @@ Oromiyaa,<br>
         }
 
         init();
-if ('serviceWorker' in navigator) {
+// --- KOOIDII OFFLINE HOJJETU KANA QOFA JALA GALCHI ---
+        if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 const swCode = `
-                    const cacheName = 'karaa-karraa-vFINAL';
+                    const cacheName = 'karaa-karraa-final-v200';
                     const assets = [
                         './',
                         './index.html',
@@ -830,13 +831,15 @@ if ('serviceWorker' in navigator) {
                     });
                 `;
                 const blob = new Blob([swCode], { type: 'application/javascript' });
-                navigator.serviceWorker.register(URL.createObjectURL(blob));
+                navigator.serviceWorker.register(URL.createObjectURL(blob))
+                    .then(() => console.log("Offline mode optimized!"));
             });
         }
     </script>
     
 </body>
 </html>
+
 
 
 
