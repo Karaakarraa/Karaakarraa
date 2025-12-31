@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KARAA KARRAA - Full Edition</title>
-
+    
     <link rel="manifest" href="manifest.json">
 
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
+    
     <style>
         :root {
             --primary-bg: #4B1F01; --sidebar-bg: #2D1301;
@@ -49,7 +49,7 @@
             flex-direction: column; 
             align-items: center; 
         }
-
+        
         /* Background adii (paper) barreeffama kee hunda akka liqimsuuf min-height kaa'eera */
         .paper { 
             background: var(--paper); 
@@ -61,7 +61,7 @@
             min-height: fit-content; /* Akka inni barreeffamaan dheeratuuf */
             margin-bottom: 40px;
         }
-
+        
         @media (max-width: 600px) { .paper { padding: 30px 20px; } }
 
         section { display: none; }
@@ -76,7 +76,7 @@
         /* --- FOOTER --- */
         footer { background: var(--sidebar-bg); height: 70px; border-top: 1px solid var(--gold); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; }
         .nav-btn { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 8px 20px; border-radius: 20px; cursor: pointer; font-weight: bold; }
-
+        
         #installBanner { display: none; background: var(--gold); color: #000; text-align: center; padding: 10px; font-weight: bold; border: none; width: 100%; cursor: pointer; }
     </style>
 </head>
@@ -114,7 +114,7 @@
             <button class="nav-btn" onclick="change(-1)">←</button>
             <button class="nav-btn" onclick="change(1)">→</button>
         </div>
-
+        
     </footer>
 <button id="installBanner" style="display:none;" onclick="installApp()">
     INSTALL KARAA KARRAA APP
@@ -793,11 +793,13 @@ Oromiyaa,<br>
                 document.getElementById('installBanner').style.display = 'none';
             }
         }
-        init(); // Koodii init() jedhuun gadiitti galchi
+
+        init();
+// Service Worker Offline akka hojjetuuf (Bakka koodii kee isa dhumatti galchi)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 const swCode = `
-                    const cacheName = 'karaa-karraa-v100';
+                    const cacheName = 'karaa-karraa-v2.0';
                     const assets = [
                         './',
                         './index.html',
@@ -807,24 +809,30 @@ Oromiyaa,<br>
 
                     self.addEventListener('install', (e) => {
                         e.waitUntil(
-                            caches.open(cacheName).then((cache) => cache.addAll(assets))
+                            caches.open(cacheName).then((cache) => {
+                                return cache.addAll(assets);
+                            })
                         );
                     });
 
                     self.addEventListener('fetch', (e) => {
                         e.respondWith(
-                            caches.match(e.request).then((res) => res || fetch(e.request))
+                            caches.match(e.request).then((res) => {
+                                return res || fetch(e.request);
+                            })
                         );
                     });
                 `;
                 const blob = new Blob([swCode], { type: 'application/javascript' });
                 navigator.serviceWorker.register(URL.createObjectURL(blob))
-                    .then(() => console.log("Service Worker Registered"));
+                    .then(() => console.log("Offline mode ready!"));
             });
         }
     </script>
+    
 </body>
 </html>
+
 
 
 
