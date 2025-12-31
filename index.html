@@ -798,16 +798,19 @@ Oromiyaa,<br>
         }
 
         init();
-		
-       if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./sw.js')
-      .then(() => console.log('SW registered'))
-      .catch(err => console.log('SW failed', err));
-  }
+	if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then(() => console.log("SW Registered Successfully"))
+      .catch((err) => console.log("SW Registration Failed", err));
+  });
+}
     </script>
     
 </body>
 </html>
+
 
 
 
